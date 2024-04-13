@@ -23,6 +23,20 @@ public class GmoOnline {
 	Assert.assertEquals(OnlineCatalogTitle, "OnLine Catalog");
 	driver.findElement(By.name("QTY_GLASSES")).clear();
 	driver.findElement(By.name("QTY_GLASSES")).sendKeys("3");
+	driver.findElement(By.xpath("//input[@value='Place An Order']")).click();
+	String placeOrderTitle = driver.getTitle();
+	System.out.println("placeOrderTitle:"+placeOrderTitle);
+	Assert.assertEquals(placeOrderTitle, "Place Order");
+	String UnitPrice=driver.findElement(By.xpath("//table[@border='1']/tbody/tr[2]/td[4]")).getText();
+	System.out.println("UnitPrice:"+UnitPrice);
+	String floatValueOfUnitPrice= UnitPrice.substring(2).trim();
+	System.out.println("floatValueOfUnitPrice:"+floatValueOfUnitPrice);
+	float calculatedUnitprice=Float.parseFloat(floatValueOfUnitPrice)*3;
+	System.out.println("calculatedUnitprice:"+calculatedUnitprice);
+	String totalPriceDisplayed = driver.findElement(By.xpath("//table[@border='1']/tbody/tr[2]/td[5]")).getText();
+	float floatValueOfTotalPrice = Float.parseFloat(totalPriceDisplayed.substring(2).trim());
+	Assert.assertEquals(calculatedUnitprice, floatValueOfTotalPrice);
+	System.out.println("floatValueOfTotalPrice:"+floatValueOfTotalPrice);
 	}
 
 }
