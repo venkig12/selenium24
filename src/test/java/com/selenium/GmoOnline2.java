@@ -45,7 +45,6 @@ public class GmoOnline2 extends Library{
 	System.out.println("placeOrderTitle:"+placeOrderTitle);
 	Assert.assertEquals(placeOrderTitle, Constants.PlaceOrderTitle);
 	
-	//String UnitPrice=driver.findElement(By.xpath("//table[@border='1']/tbody/tr[2]/td[4]")).getText();
 	String UnitPrice= objgmoOnlinePOM.UnitPrice.getText();
 	System.out.println("UnitPrice:"+UnitPrice);
 	String floatValueOfUnitPrice= UnitPrice.substring(2).trim();
