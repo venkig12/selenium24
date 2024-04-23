@@ -8,6 +8,7 @@ public class Constants {
 	public static String GmoOnlineTitle="Welcome to Green Mountain Outpost";
 	public static String OnlineCatalogTitle="OnLine Catalog";
 	public static String PlaceOrderTitle="Place Order";
+	public static String NormalAlertText="You clicked a butto";
 	
 	
 

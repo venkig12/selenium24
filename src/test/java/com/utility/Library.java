@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -41,7 +42,10 @@ public class Library {
 			driver=new EdgeDriver();
 			break;
 		case "chrome":
-			driver=new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			File objFile = new File (System.getProperty("user.dir")+"//addBlocker//extension_5.21.0.crx");
+			options.addExtensions(objFile);
+			driver=new ChromeDriver(options);
 			break;
 		case "ie":
 			driver=new InternetExplorerDriver();
