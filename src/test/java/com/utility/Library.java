@@ -52,6 +52,9 @@ public class Library {
 			break;
 		}
 		driver.manage().window().maximize();
+		//implicit wait : It is a global waiting mechanism which is applicable for all web elements 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
 		
 	}
 	
