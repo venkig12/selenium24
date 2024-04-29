@@ -16,7 +16,6 @@ public class AlertsPOM {
 	@FindBy(id="alertButton")
 	public WebElement NormalAlert;
 	
-	
 	@FindBy(id="timerAlertButton")
 	public WebElement TimerAlertButton;
 	
