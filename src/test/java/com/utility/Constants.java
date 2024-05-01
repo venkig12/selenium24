@@ -15,4 +15,5 @@ public class Constants {
 	public static String PromptBoxAlertMessage="Hello! I am learning Alerts";
 	public static String PrompBoxAlertResult="You entered Hello! I am learning Alerts";
 	public static String framesPageTitle="Frames";
+	public static String DemoQaTitle="DEMOQA";
 }
