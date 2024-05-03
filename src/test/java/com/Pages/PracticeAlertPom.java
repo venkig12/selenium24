@@ -28,6 +28,9 @@ public class PracticeAlertPom {
 	@FindBy(xpath="//a[text()='Download PDF File']")
 	public WebElement ChooseFileButton ;
 	
+	@FindBy(xpath="//*[@id='double-click']")
+	public WebElement DoubleClickMe;
+	
 	public void ClickOnNormalAlert() {
 		NormalAlert.click();}
 	
