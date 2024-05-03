@@ -52,9 +52,9 @@ public class MouseOperations extends Library{
 		driver.switchTo().frame(objMouseOperations.iframe);
 		Actions objActions = new Actions(driver);
 		objActions.dragAndDrop(objMouseOperations.Draggable, objMouseOperations.Droppable).build().perform();
-		driver.switchTo().defaultContent();
-		objMouseOperations.AcceptOutSideiframe.click();
-		
+		driver.switchTo().defaultContent(); //to come out of the frame
+		//objMouseOperations.AcceptOutSideframe.click();
+		objActions.click(objMouseOperations.AcceptOutSideframe).build().perform();
 	}
 	
 	@BeforeTest

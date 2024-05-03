@@ -32,6 +32,6 @@ public class MouserOperationsPOM {
 	public WebElement Droppable;
 
 	@FindBy(xpath="//a[text()='Accept']")
-	public WebElement AcceptOutSideiframe;
+	public WebElement AcceptOutSideframe;
 	
 }
