@@ -17,4 +17,5 @@ public class Constants {
 	public static String framesPageTitle="Frames";
 	public static String DemoQaTitle="DEMOQA";
 	public static String AssignmentFramespageTitle="Frames Example in Selenium webdriver";
+	public static String FlipkartTitle="Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
 }
