@@ -16,4 +16,10 @@ public class Constants {
 	public static String PrompBoxAlertResult="You entered Hello! I am learning Alerts";
 	public static String framesPageTitle="Frames";
 	public static String DemoQaTitle="DEMOQA";
+	public static String AssignmentFramespageTitle="Frames Example in Selenium webdriver";
+	public static String FlipkartTitle="Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
+	public static String AlertText="I am alert";
+	public static String ConfirmationBoxText="I am confirm";
+	public static String PBoxMessage="LearningAlerts";
+	public static String DoubleClick="You double clicked me!!!, You got to be kidding me";
 }
