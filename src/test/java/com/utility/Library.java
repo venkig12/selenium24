@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -60,6 +62,11 @@ public class Library {
 	
 	public static void PageLoadTimeOut() {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.pageLoadTimeout));
+	}
+	
+	public void scrollIntoView(WebElement webtable) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);",webtable);
 	}
 
 }
