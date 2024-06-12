@@ -4,25 +4,25 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class FirstseleniumProgram {
+public class FirstSeleniumProgram {
 	static WebDriver driver;
-
 	public static void main(String[] args) {
+
 		// TODO Auto-generated method stub
-		driver= new EdgeDriver(); 
-		driver.get("https://www.costco.com/");
+
+		driver= new ChromeDriver();
+		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(200));
-		String title= driver.getTitle();
-		System.out.println(title);
-		Assert.assertEquals(title, "Welcome to Costco Wholesale");
-		driver.findElement(By.id("search-field")).sendKeys("samsung s24 mobiles");
-		
-	   driver.findElement(By.xpath("//i[@automation-id='searchWidgetButton']")).click();
-		driver.close();
-	
-}
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(70));
+		String Title = driver.getTitle();
+		System.out.println(Title);
+		Assert.assertEquals(Title, "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("samsungs22mobiles");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+
+	}
+
 }
